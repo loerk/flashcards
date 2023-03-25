@@ -1,0 +1,42 @@
+.card {
+  width: 200px;
+  height: 200px;
+  padding: 4rem;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: #282c34;
+  box-shadow: 20px 20px 60px #22252c, -20px -20px 60px #2e333c;
+  transform-style: preserve-3d;
+  transition: 150ms;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+.hidden {
+  display: none;
+}
+.front {
+  color: #d4a0a0;
+  font-size: large;
+  font-weight: 900;
+}
+.back {
+  background: #d4a0a0;
+  color: #282c34;
+  transform: rotateY(180deg);
+  font-weight: 900;
+}
+
+button {
+  border-radius: 5px;
+  background: #282c34;
+  box-shadow: 20px 20px 60px #22252c, -20px -20px 60px #2e333c;
+  color: white;
+}
